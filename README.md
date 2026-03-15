@@ -1,2 +1,2 @@
 # GEIM
-A 2d game made 
+A 2d game made by:
