@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://br4bdme212w4l"]
+
+[ext_resource type="Script" uid="uid://y8vjae60mvfs" path="res://maps/fisherman_house.gd" id="1_f76ph"]
+[ext_resource type="Texture2D" uid="uid://bwpdyf31o2c1r" path="res://locations/fisherman_house/BASE.png" id="1_mvsoq"]
+[ext_resource type="Texture2D" uid="uid://c8ncvsmane77t" path="res://locations/fisherman_house/FISHERMAN_HOUSE_INT.png" id="2_puvlb"]
+[ext_resource type="PackedScene" uid="uid://i32o4p758fx5" path="res://objects/tv.tscn" id="6_7unsq"]
+[ext_resource type="PackedScene" uid="uid://qjkiyo1o1t3u" path="res://objects/toolbox.tscn" id="13_f76ph"]
+[ext_resource type="PackedScene" uid="uid://84ggp42om082" path="res://objects/boots.tscn" id="13_ooah1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvsoq"]
+size = Vector2(47, 77)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_puvlb"]
+a = Vector2(-5, -1)
+b = Vector2(98, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u62eo"]
+size = Vector2(12, 37)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eajmb"]
+a = Vector2(0, 1)
+b = Vector2(-128, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_13676"]
+b = Vector2(0, 33)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_h052b"]
+a = Vector2(1, 0)
+b = Vector2(-31, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxg5a"]
+size = Vector2(26, 24)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_41fcx"]
+b = Vector2(-1, 109)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_v4ru2"]
+a = Vector2(-1, 0)
+b = Vector2(31, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_btsl7"]
+b = Vector2(95, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_71pjw"]
+a = Vector2(0, -22)
+b = Vector2(0, 12)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6djhe"]
+a = Vector2(158, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rrly0"]
+a = Vector2(0, -237)
+
+[node name="house" type="Node2D" unique_id=1105601923]
+y_sort_enabled = true
+script = ExtResource("1_f76ph")
+metadata/_edit_lock_ = true
+
+[node name="base_filled" type="Sprite2D" parent="." unique_id=1753781535]
+visible = false
+texture = ExtResource("2_puvlb")
+metadata/_edit_lock_ = true
+
+[node name="house" type="StaticBody2D" parent="." unique_id=998420251]
+z_index = -1
+
+[node name="house" type="Sprite2D" parent="house" unique_id=1376952665]
+z_index = -1
+texture = ExtResource("1_mvsoq")
+metadata/_edit_lock_ = true
+
+[node name="bed_collision" type="CollisionShape2D" parent="house" unique_id=1429639548]
+position = Vector2(136.5, 7.5)
+shape = SubResource("RectangleShape2D_mvsoq")
+metadata/_edit_lock_ = true
+
+[node name="desk_collision" type="CollisionShape2D" parent="house" unique_id=455571933]
+position = Vector2(15, -15)
+shape = SubResource("SegmentShape2D_puvlb")
+metadata/_edit_lock_ = true
+
+[node name="wall_pillar_collision" type="CollisionShape2D" parent="house" unique_id=74526352]
+position = Vector2(5, -3.5)
+shape = SubResource("RectangleShape2D_u62eo")
+metadata/_edit_lock_ = true
+
+[node name="kitchen_island_collision1" type="CollisionShape2D" parent="house" unique_id=1408655313]
+position = Vector2(-1, -19)
+shape = SubResource("SegmentShape2D_eajmb")
+metadata/_edit_lock_ = true
+
+[node name="kitchen_island_collision2" type="CollisionShape2D" parent="house" unique_id=1138959088]
+position = Vector2(-128, -18)
+shape = SubResource("SegmentShape2D_13676")
+metadata/_edit_lock_ = true
+
+[node name="kitchen_island_collision3" type="CollisionShape2D" parent="house" unique_id=480244705]
+position = Vector2(-129, 14)
+shape = SubResource("SegmentShape2D_h052b")
+metadata/_edit_lock_ = true
+
+[node name="trash_can" type="CollisionShape2D" parent="house" unique_id=1017915822]
+position = Vector2(-148, 25)
+shape = SubResource("RectangleShape2D_jxg5a")
+metadata/_edit_lock_ = true
+
+[node name="wall_west" type="CollisionShape2D" parent="house" unique_id=1798070558]
+position = Vector2(-160, 36)
+shape = SubResource("SegmentShape2D_41fcx")
+metadata/_edit_lock_ = true
+
+[node name="wall_south1" type="CollisionShape2D" parent="house" unique_id=155968609]
+position = Vector2(-160, 144)
+shape = SubResource("SegmentShape2D_v4ru2")
+metadata/_edit_lock_ = true
+
+[node name="wall_south2" type="CollisionShape2D" parent="house" unique_id=2105108219]
+position = Vector2(-95, 145)
+shape = SubResource("SegmentShape2D_btsl7")
+metadata/_edit_lock_ = true
+
+[node name="wall_south3" type="CollisionShape2D" parent="house" unique_id=1138032707]
+position = Vector2(1, 134)
+shape = SubResource("SegmentShape2D_71pjw")
+metadata/_edit_lock_ = true
+
+[node name="wall_south4" type="CollisionShape2D" parent="house" unique_id=1627076060]
+position = Vector2(2, 103)
+shape = SubResource("SegmentShape2D_6djhe")
+metadata/_edit_lock_ = true
+
+[node name="wall_east" type="CollisionShape2D" parent="house" unique_id=1329332286]
+position = Vector2(161, 103)
+shape = SubResource("SegmentShape2D_rrly0")
+metadata/_edit_lock_ = true
+
+[node name="boots" parent="." unique_id=2030546294 instance=ExtResource("13_ooah1")]
+y_sort_enabled = true
+position = Vector2(-151, 133)
+metadata/_edit_lock_ = true
+
+[node name="toolbox" parent="." unique_id=1212628476 instance=ExtResource("13_f76ph")]
+z_index = 1
+position = Vector2(79, 99)
+metadata/_edit_lock_ = true
+
+[node name="Tv" parent="." unique_id=1801882378 instance=ExtResource("6_7unsq")]
+position = Vector2(-48, 78)
+metadata/_edit_lock_ = true

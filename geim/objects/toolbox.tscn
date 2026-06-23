@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://qjkiyo1o1t3u"]
+
+[ext_resource type="Texture2D" uid="uid://dlkgjw8oe6l2i" path="res://locations/fisherman_house/TOOLBOX.png" id="1_34gi2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hf060"]
+size = Vector2(36, 8)
+
+[node name="toolbox" type="StaticBody2D" unique_id=1212628476]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2037299394]
+position = Vector2(-79, -99)
+texture = ExtResource("1_34gi2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=160014060]
+position = Vector2(-1, 5)
+shape = SubResource("RectangleShape2D_hf060")
