@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cawe7gtkhnbwx"]
+
+[ext_resource type="Texture2D" uid="uid://vqxmjjp1tage" path="res://assets/characters/fisherman/mockup-test-clean-separate.png" id="1_kod1s"]
+[ext_resource type="Script" uid="uid://b35ypwp1tknyv" path="res://scenes/camera.gd" id="1_tmlye"]
+[ext_resource type="Texture2D" uid="uid://dxkgjcgfjmkxe" path="res://assets/characters/fisherman/text box.png" id="2_tmlye"]
+
+[node name="camera" type="Camera2D" unique_id=85573729]
+script = ExtResource("1_tmlye")
+metadata/_edit_lock_ = true
+
+[node name="dialogueUI" type="CanvasLayer" parent="." unique_id=484649998]
+visible = false
+
+[node name="dialogueBox" type="TextureRect" parent="dialogueUI" unique_id=1338632665]
+offset_left = 283.0
+offset_top = 167.0
+offset_right = 923.0
+offset_bottom = 647.0
+texture = ExtResource("2_tmlye")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="dialogueText" type="RichTextLabel" parent="dialogueUI/dialogueBox" unique_id=1424051008]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 388.0
+offset_right = 573.0
+offset_bottom = 449.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="pressEnter" type="RichTextLabel" parent="dialogueUI/dialogueBox" unique_id=350443733]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 455.0
+offset_right = 583.0
+offset_bottom = 468.0
+theme_override_colors/default_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
+theme_override_font_sizes/normal_font_size = 9
+theme_override_font_sizes/bold_font_size = 9
+theme_override_font_sizes/bold_italics_font_size = 9
+theme_override_font_sizes/italics_font_size = 9
+theme_override_font_sizes/mono_font_size = 9
+bbcode_enabled = true
+text = "[i]Press Enter ...[/i]"
+
+[node name="characters" type="CanvasLayer" parent="dialogueUI" unique_id=1836776396]
+
+[node name="fisherman" type="TextureRect" parent="dialogueUI/characters" unique_id=1980571498]
+visible = false
+offset_left = 283.0
+offset_top = 167.0
+offset_right = 923.0
+offset_bottom = 647.0
+texture = ExtResource("1_kod1s")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true

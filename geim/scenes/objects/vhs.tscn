@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://degmj66ynly48"]
+
+[ext_resource type="Texture2D" uid="uid://nrgjra6o5fux" path="res://assets/locations/fisherman_house/VHS.png" id="1_ex833"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1qi6"]
+size = Vector2(16, 8)
+
+[node name="vhs" type="StaticBody2D" unique_id=745714231]
+y_sort_enabled = true
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1149972921]
+texture = ExtResource("1_ex833")
+offset = Vector2(0, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1119448326]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_o1qi6")

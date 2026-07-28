@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dmkb3ap1lun1b"]
+
+[ext_resource type="Texture2D" uid="uid://bpys0ea4lr6sp" path="res://assets/locations/fisherman_house/KNIFE.png" id="1_25txl"]
+[ext_resource type="Script" uid="uid://gd423cnqwi48" path="res://scenes/objects/knife.gd" id="1_o8713"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5ndg"]
+size = Vector2(6, 52)
+
+[node name="knife" type="Area2D" unique_id=255808549]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_o8713")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2113949550]
+texture = ExtResource("1_25txl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=292045169]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_f5ndg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

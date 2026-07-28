@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dlwksed08v3qw"]
+
+[ext_resource type="Script" uid="uid://cpgol2hvvok5x" path="res://scenes/maps/beach.gd" id="1_p5ska"]
+[ext_resource type="Texture2D" uid="uid://c65fycwrv7vc2" path="res://assets/locations/beach/water animation aseprite.png" id="2_d5gwn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k0y2"]
+atlas = ExtResource("2_d5gwn")
+region = Rect2(0, 0, 3637, 1705)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vyi1"]
+atlas = ExtResource("2_d5gwn")
+region = Rect2(3637, 0, 3637, 1705)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ayvh"]
+atlas = ExtResource("2_d5gwn")
+region = Rect2(7274, 0, 3637, 1705)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5ono"]
+atlas = ExtResource("2_d5gwn")
+region = Rect2(10911, 0, 3637, 1705)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4l5o"]
+atlas = ExtResource("2_d5gwn")
+region = Rect2(14548, 0, 3637, 1705)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jhog"]
+atlas = ExtResource("2_d5gwn")
+region = Rect2(18185, 0, 3637, 1705)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daa5s"]
+atlas = ExtResource("2_d5gwn")
+region = Rect2(21822, 0, 3637, 1705)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl3nv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k0y2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vyi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ayvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5ono")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4l5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jhog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daa5s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5ska"]
+size = Vector2(35, 5)
+
+[node name="beach" type="Node2D" unique_id=1927617241]
+script = ExtResource("1_p5ska")
+metadata/_edit_lock_ = true
+
+[node name="beachAnimation" type="AnimatedSprite2D" parent="." unique_id=1860994374]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_sl3nv")
+metadata/_edit_lock_ = true
+
+[node name="fishDoor" type="Area2D" parent="." unique_id=1992617168]
+collision_layer = 4
+collision_mask = 2
+metadata/_edit_lock_ = true
+
+[node name="fishInteraction" type="CollisionShape2D" parent="fishDoor" unique_id=2087247324]
+position = Vector2(-276.5, -326.5)
+shape = SubResource("RectangleShape2D_p5ska")
+
+[connection signal="body_entered" from="fishDoor" to="." method="_on_fish_door_body_entered"]
