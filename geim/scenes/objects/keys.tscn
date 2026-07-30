@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://j724k457ivw4"]
 
+[ext_resource type="Script" uid="uid://beooclgloqiqb" path="res://scenes/objects/keys.gd" id="1_n17pt"]
 [ext_resource type="Texture2D" uid="uid://bj8tbynfxa8f" path="res://assets/locations/fisherman_house/KEYS.png" id="1_rcujn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18id3"]
-size = Vector2(20, 14)
+size = Vector2(20, 35)
 
-[node name="keys" type="StaticBody2D" unique_id=2138468919]
+[node name="keys" type="Area2D" unique_id=1830880518]
+collision_layer = 4
 collision_mask = 2
+input_pickable = false
+script = ExtResource("1_n17pt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1273729038]
 texture = ExtResource("1_rcujn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1286691775]
+position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_18id3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

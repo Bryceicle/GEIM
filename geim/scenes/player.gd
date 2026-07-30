@@ -31,20 +31,20 @@ func _input(event: InputEvent) -> void:
 		return
 	
 	# Updates sprite based on direction of movement 
-	if Input.is_action_just_pressed("move_down"):
+	if Input.is_action_pressed("move_down"):
 		character_sprite.play("Fisherman Walk Down")
 		return
 	
-	if Input.is_action_just_pressed("move_up"):
+	if Input.is_action_pressed("move_up"):
 		character_sprite.play("Fisherman Walk Up")
 		return
 	
-	if Input.is_action_just_pressed("move_left"):
+	if Input.is_action_pressed("move_left"):
 		character_sprite.play("Fisherman Walk Left")
 		character_sprite.flip_h = false
 		return
 	
-	if Input.is_action_just_pressed("move_right"):
+	if Input.is_action_pressed("move_right"):
 		character_sprite.play("Fisherman Walk Left")
 		character_sprite.flip_h = true
 		return

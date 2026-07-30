@@ -12,7 +12,7 @@ enum Characters {
 @onready var characters: CanvasLayer = $dialogueUI/characters
 
 var staticCam: bool = true
-var dialogueShown: bool = true
+var dialogueShown: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 
 func showDialogue(text: String = "", char: int = -1) -> void:
 	
+	dialogueShown = true
 	dialogueUI.visible = true
 	dialogueText.add_text(text)
 	
@@ -32,6 +33,7 @@ func showDialogue(text: String = "", char: int = -1) -> void:
 		characters.get_child(char).visible = true
 
 func removeDialogue() -> void:
+	dialogueShown = false
 	dialogueText.clear()
 	dialogueUI.visible = false
 	for child in characters.get_children():
