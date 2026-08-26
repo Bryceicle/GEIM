@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dktlux8ovu44y"
-path="res://.godot/imported/shore clean up 4.png-eb6b7ae7a7f2ed7475e09caa714c66c9.ctex"
+uid="uid://clms261w10kto"
+path="res://.godot/imported/BeachAnimatedFrame7.png-2a7c70709e01f7d05164e24b4862c9f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/beach/shore clean up 4.png"
-dest_files=["res://.godot/imported/shore clean up 4.png-eb6b7ae7a7f2ed7475e09caa714c66c9.ctex"]
+source_file="res://assets/locations/beach/BeachAnimatedFrame7.png"
+dest_files=["res://.godot/imported/BeachAnimatedFrame7.png-2a7c70709e01f7d05164e24b4862c9f2.ctex"]
 
 [params]
 

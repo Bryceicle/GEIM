@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvvgnbjq8ytvu"
-path="res://.godot/imported/shore layout.jpg-fc70209ffac6ccdc86eb04edf3c30408.ctex"
+uid="uid://ujvreh0vh1n3"
+path="res://.godot/imported/BeachAnimatedFrame1.png-6345f0b52d5160dc53375a9633ec3537.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/beach/shore layout.jpg"
-dest_files=["res://.godot/imported/shore layout.jpg-fc70209ffac6ccdc86eb04edf3c30408.ctex"]
+source_file="res://assets/locations/beach/BeachAnimatedFrame1.png"
+dest_files=["res://.godot/imported/BeachAnimatedFrame1.png-6345f0b52d5160dc53375a9633ec3537.ctex"]
 
 [params]
 

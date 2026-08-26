@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c65fycwrv7vc2"
-path="res://.godot/imported/water animation aseprite.png-9a6b0208ec24b8c753fa497b2b48adb2.ctex"
+uid="uid://dg6pftuh1cvwi"
+path="res://.godot/imported/BeachAnimatedFrame3.png-ccd361fcdaf5dd4e9919574a926557ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/beach/water animation aseprite.png"
-dest_files=["res://.godot/imported/water animation aseprite.png-9a6b0208ec24b8c753fa497b2b48adb2.ctex"]
+source_file="res://assets/locations/beach/BeachAnimatedFrame3.png"
+dest_files=["res://.godot/imported/BeachAnimatedFrame3.png-ccd361fcdaf5dd4e9919574a926557ce.ctex"]
 
 [params]
 
