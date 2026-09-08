@@ -16,8 +16,15 @@ var inventory: Array
 
 @onready var character_sprite: AnimatedSprite2D = $Sprite
 @onready var camera: Camera2D = $"../Camera"
+@onready var root: SceneTree = get_tree()
 
 func _input(event: InputEvent) -> void:
+	
+	# Toggle the pause menu on or off
+	if Input.is_action_just_pressed("menu"):
+		camera.togglePauseMenu()
+		root.paused = true
+		return
 	
 	# Checks for an interactible node, and if one exists, interacts with it
 	if Input.is_action_just_pressed("interact"):
@@ -25,9 +32,9 @@ func _input(event: InputEvent) -> void:
 			interactableNode.interact()
 		return
 	
+	# If a dialouge box exists, it becomes cleared
 	if Input.is_action_just_pressed("clear"):
-		if camera.dialogueShown:
-			camera.removeDialogue()
+		camera.removeDialogue()
 		return
 	
 	# Updates sprite based on direction of movement 

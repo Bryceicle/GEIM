@@ -13,5 +13,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 func interact() -> void:
 	player.addItem(2)
-	camera.showDialogue("Never know when you'll need a knife ...", 0)
+	camera.loadDialogue("Never know when you'll need a knife ...", 0)
 	self.queue_free()

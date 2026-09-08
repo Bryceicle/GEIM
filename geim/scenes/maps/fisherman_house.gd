@@ -1,10 +1,11 @@
 extends Node2D
 
 @onready var main : Node2D = $"../../"
+@onready var camera : Node2D = $"../../Camera"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	camera.staticCam = true
 	
 func get_spawn(state: int = 0) -> Vector2i:
 	

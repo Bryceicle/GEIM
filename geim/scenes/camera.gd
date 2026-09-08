@@ -1,18 +1,16 @@
 extends Camera2D
 
-enum Characters {
-	NONE,
-	FISHERMAN
-}
-
 @onready var main: Node2D = $"../"
 @onready var player: CharacterBody2D = $"../Fisherman"
-@onready var dialogueUI: CanvasLayer = $dialogueUI
-@onready var dialogueText: RichTextLabel = $dialogueUI/dialogueBox/dialogueText
-@onready var characters: CanvasLayer = $dialogueUI/characters
+@onready var dialogue: Node2D = $dialogue
+@onready var pauseMenu: Node2D = $pauseMenu
 
-var staticCam: bool = true
-var dialogueShown: bool = false
+const dialoguePreload = preload("res://scenes/UI/dialogue.tscn")
+const pauseMenuPreload = preload("res://scenes/UI/pauseMenu.tscn")
+
+var staticCam: bool
+var dialogueNode: CanvasLayer = dialoguePreload.instantiate()
+var pauseMenuNode: CanvasLayer = pauseMenuPreload.instantiate()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,18 +21,20 @@ func _process(delta: float) -> void:
 	if !staticCam:
 		self.position = player.position
 
-func showDialogue(text: String = "", char: int = -1) -> void:
+func loadDialogue(text: String = "", char: int = -1) -> void:
 	
-	dialogueShown = true
-	dialogueUI.visible = true
-	dialogueText.add_text(text)
-	
-	if char != -1:
-		characters.get_child(char).visible = true
+	dialogue.add_child(dialogueNode)
+	dialogue.get_child(0).addText(text, char)
 
 func removeDialogue() -> void:
-	dialogueShown = false
-	dialogueText.clear()
-	dialogueUI.visible = false
-	for child in characters.get_children():
-		child.visible = false
+	
+	if dialogue.get_child_count() != 0:
+		dialogue.get_child(0).clearText()
+		dialogue.remove_child(dialogueNode)
+
+func togglePauseMenu() -> void:
+	
+	if pauseMenu.get_child_count() == 0:
+		pauseMenu.add_child(pauseMenuNode)
+	else:
+		pauseMenu.remove_child(pauseMenuNode)
