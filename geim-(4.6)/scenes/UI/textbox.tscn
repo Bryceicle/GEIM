@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bfdhi0t2xq2if"]
+
+[ext_resource type="Texture2D" uid="uid://dxkgjcgfjmkxe" path="res://assets/characters/fisherman/text box.png" id="1_v60m8"]
+
+[node name="textbox" type="Control" unique_id=682377807]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1250899812]
+layout_mode = 0
+offset_left = -401.0
+offset_top = -426.0
+offset_right = 239.0
+offset_bottom = 54.0
+texture = ExtResource("1_v60m8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=793412787]
+layout_mode = 0
+offset_left = -181.0
+offset_top = -39.0
+offset_right = 178.0
+offset_bottom = 34.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis consequat velit, non ultrices neque. Duis iaculis eleifend pretium. Praesent vel nisl mollis, varius nibh vel, malesuada dolor. Donec ut justo id eros varius ultricies eu at lectus. Donec facilisis et est at ornare. Aliquam erat volutpat. Maecenas scelerisque porta turpis vitae posuere.
+
+Fusce vel metus vel arcu malesuada scelerisque ut ut nisl. Integer mauris augue, fringilla eu blandit sed, vulputate quis magna. Donec pharetra facilisis bibendum. Etiam dapibus ultricies dignissim. Vestibulum pretium feugiat ligula, at venenatis tellus blandit non. Vestibulum euismod augue vitae dui lacinia hendrerit. Praesent eget malesuada leo. Integer viverra sodales enim, a venenatis sapien consectetur ac. Phasellus finibus faucibus elit, ut fringilla lectus luctus non. Nunc ultricies mauris neque, sollicitudin feugiat turpis commodo a. "
