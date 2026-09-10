@@ -34,6 +34,10 @@ func load_map(get_map: Map, state: int = 0) -> void:
 	# Add map to scene tree, using call_deferred to ensure previous map has been removed before adding new map.
 	maps.call_deferred("add_child", map)
 	
+	await get_tree().process_frame
+	
+	maps.get_child(0).request_ready()
+	
 	# Add set the player map, allowing direct acsess in player.gd 
 	player.map = map
 	

@@ -48,6 +48,84 @@ metadata/_edit_lock_ = true
 [node name="continueCollision" type="CollisionShape2D" parent="continueButton/continueArea" unique_id=144131015]
 position = Vector2(77, 24)
 shape = SubResource("RectangleShape2D_yf1hk")
+metadata/_edit_lock_ = true
+
+[node name="optionsButton" type="TextureRect" parent="." unique_id=2147036278]
+z_index = 1
+offset_left = 499.0
+offset_top = 298.0
+offset_right = 653.0
+offset_bottom = 346.0
+texture = ExtResource("2_cu61w")
+metadata/_edit_lock_ = true
+
+[node name="optionsSelect" type="TextureRect" parent="optionsButton" unique_id=1360967099]
+visible = false
+z_index = 2
+layout_mode = 0
+offset_left = -1.0
+offset_top = 15.0
+offset_right = 155.0
+offset_bottom = 34.0
+texture = ExtResource("3_4a0m7")
+metadata/_edit_lock_ = true
+
+[node name="optionsText" type="RichTextLabel" parent="optionsButton" unique_id=1863967213]
+z_index = 2
+layout_mode = 0
+offset_left = 38.0
+offset_top = 12.0
+offset_right = 119.0
+offset_bottom = 35.0
+text = "Options"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="optionsArea" type="Area2D" parent="optionsButton" unique_id=1367162893]
+
+[node name="optionsCollision" type="CollisionShape2D" parent="optionsButton/optionsArea" unique_id=745992152]
+position = Vector2(77, 24)
+shape = SubResource("RectangleShape2D_yf1hk")
+metadata/_edit_lock_ = true
+
+[node name="quitButton" type="TextureRect" parent="." unique_id=997666197]
+z_index = 1
+offset_left = 499.0
+offset_top = 352.0
+offset_right = 653.0
+offset_bottom = 400.0
+texture = ExtResource("2_cu61w")
+metadata/_edit_lock_ = true
+
+[node name="quitSelect" type="TextureRect" parent="quitButton" unique_id=401502873]
+visible = false
+z_index = 2
+layout_mode = 0
+offset_left = -1.0
+offset_top = 15.0
+offset_right = 155.0
+offset_bottom = 34.0
+texture = ExtResource("3_4a0m7")
+metadata/_edit_lock_ = true
+
+[node name="quitText" type="RichTextLabel" parent="quitButton" unique_id=2002952739]
+z_index = 2
+layout_mode = 0
+offset_left = 38.0
+offset_top = 12.0
+offset_right = 119.0
+offset_bottom = 35.0
+text = "Quit"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="quitArea" type="Area2D" parent="quitButton" unique_id=2098647324]
+metadata/_edit_lock_ = true
+
+[node name="quitCollision" type="CollisionShape2D" parent="quitButton/quitArea" unique_id=1076250617]
+position = Vector2(77, 24)
+shape = SubResource("RectangleShape2D_yf1hk")
+metadata/_edit_lock_ = true
 
 [node name="menuBackground" type="TextureRect" parent="." unique_id=195738489]
 offset_left = 484.0
@@ -60,3 +138,6 @@ metadata/_edit_lock_ = true
 [connection signal="input_event" from="continueButton/continueArea" to="." method="_on_continue_area_input_event"]
 [connection signal="mouse_entered" from="continueButton/continueArea" to="." method="_on_continue_area_mouse_entered"]
 [connection signal="mouse_exited" from="continueButton/continueArea" to="." method="_on_continue_area_mouse_exited"]
+[connection signal="input_event" from="quitButton/quitArea" to="." method="_on_quit_area_input_event"]
+[connection signal="mouse_entered" from="quitButton/quitArea" to="." method="_on_quit_area_mouse_entered"]
+[connection signal="mouse_exited" from="quitButton/quitArea" to="." method="_on_quit_area_mouse_exited"]

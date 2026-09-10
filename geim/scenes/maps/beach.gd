@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var main : Node2D = $"../../"
-@onready var camera : Node2D = $"../../Camera"
+@onready var main : Node2D = get_node("/root/main")
+@onready var camera : Node2D = get_node("/root/main/Camera")
 @onready var animation: AnimatedSprite2D = $beachAnimation
 
 # Called when the node enters the scene tree for the first time.

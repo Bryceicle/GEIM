@@ -1,9 +1,23 @@
 extends CharacterBody2D
 
-enum Items {
-	COAT,
+enum ItemsEnum {
 	KEYS,
 	KNIFE
+}
+
+enum astroPartsEnum {
+	rightArmL,
+	rightArmS,
+	leftArmL,
+	leftArmS,
+	torsoL,
+	torsoS,
+	rightLegL,
+	rightLegS,
+	leftLegL,
+	leftLegS,
+	headL,
+	headS
 }
 
 const SPEED = 120
@@ -12,11 +26,14 @@ const DEACCELERATION = 1500
 
 var map: Node2D
 var interactableNode: Node2D
-var inventory: Array
+var inventoryArray: PackedByteArray
 
 @onready var character_sprite: AnimatedSprite2D = $Sprite
-@onready var camera: Camera2D = $"../Camera"
+@onready var camera: Node2D = $"/root/main/Camera"
 @onready var root: SceneTree = get_tree()
+
+func _init() -> void:
+	inventoryArray.resize(ItemsEnum.size())
 
 func _input(event: InputEvent) -> void:
 	
@@ -24,6 +41,11 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("menu"):
 		camera.togglePauseMenu()
 		root.paused = true
+		return
+	
+	# Toggle the inventory menu on or off
+	if Input.is_action_just_pressed("inventory"):
+		camera.toggleInventoryMenu()
 		return
 	
 	# Checks for an interactible node, and if one exists, interacts with it
@@ -76,8 +98,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func addItem(item):
-	inventory.append(item)
+	inventoryArray[item] = 1
 
+func removeItem(item):
+	inventoryArray[item] = 0
+	
+func getInventory() -> PackedByteArray:
+	return inventoryArray
 
 """
 	# Add the gravity.

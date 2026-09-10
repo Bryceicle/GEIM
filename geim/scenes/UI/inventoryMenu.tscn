@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://c6ggscgp8ydeg"]
+
+[ext_resource type="Texture2D" uid="uid://1vhve7bn2cui" path="res://assets/ui/inv-export/INV-B/inv-backing-B.png" id="1_egg3t"]
+[ext_resource type="Script" uid="uid://co6igbiur174i" path="res://scenes/UI/inventory.gd" id="1_ibky2"]
+[ext_resource type="Texture2D" uid="uid://btlx1l7rsc6y5" path="res://assets/ui/inv-export/INV-B/preview-B.png" id="2_lvvmf"]
+[ext_resource type="Texture2D" uid="uid://d3ow0xoxkpcfa" path="res://assets/ui/inv-export/INV-B/shadow.png" id="3_14ymb"]
+[ext_resource type="Texture2D" uid="uid://c1d106fc7p3sx" path="res://assets/ui/inv-export/INV-B/arm-R.png" id="3_j55ug"]
+[ext_resource type="Texture2D" uid="uid://dp5swnkr7u2xc" path="res://assets/ui/inv-export/INV-B/slot-backing-B.png" id="4_5bw7c"]
+[ext_resource type="Texture2D" uid="uid://r50ehehukaxx" path="res://assets/ui/inv-export/INV-B/slot.png" id="5_e34f0"]
+[ext_resource type="Texture2D" uid="uid://cuenlslc5tfx8" path="res://assets/ui/inv-export/INV-B/arm-L.png" id="5_fkgo8"]
+[ext_resource type="Texture2D" uid="uid://cwx2mbq5t45t1" path="res://assets/ui/inv-export/INV-B/txtbox-B.png" id="6_k43gh"]
+[ext_resource type="Texture2D" uid="uid://l3u25pscfj43" path="res://assets/ui/inv-export/INV-B/torso.png" id="7_brl0o"]
+[ext_resource type="Texture2D" uid="uid://clte2in0806df" path="res://assets/ui/inv-export/INV-B/arm-R-2x.png" id="7_gmw3m"]
+[ext_resource type="Texture2D" uid="uid://ds0e4odttlays" path="res://assets/ui/inv-export/INV-B/arm-L-2x.png" id="8_s8wqb"]
+[ext_resource type="Texture2D" uid="uid://dggbls2xeebum" path="res://assets/ui/inv-export/INV-B/leg-R.png" id="9_0j6f8"]
+[ext_resource type="Texture2D" uid="uid://dgpy1ai633dhy" path="res://assets/ui/inv-export/INV-B/torso-2x.png" id="9_4fywr"]
+[ext_resource type="Texture2D" uid="uid://dceq7qc5wt2oy" path="res://assets/ui/inv-export/INV-B/leg-R-2x.png" id="10_yysc5"]
+[ext_resource type="Texture2D" uid="uid://cbjom5unr3o72" path="res://assets/ui/inv-export/INV-B/leg-L-2x.png" id="11_2lef6"]
+[ext_resource type="Texture2D" uid="uid://c3riiorq6geby" path="res://assets/ui/inv-export/INV-B/leg-L.png" id="11_eu4gl"]
+[ext_resource type="Texture2D" uid="uid://dglytal6jjul1" path="res://assets/ui/inv-export/INV-B/head-2x.png" id="12_ibky2"]
+[ext_resource type="Texture2D" uid="uid://br27s3853sec3" path="res://assets/ui/inv-export/INV-B/head.png" id="13_ihx2g"]
+[ext_resource type="Texture2D" uid="uid://bj8tbynfxa8f" path="res://assets/locations/fisherman_house/KEYS.png" id="14_i7uue"]
+[ext_resource type="Texture2D" uid="uid://bpys0ea4lr6sp" path="res://assets/locations/fisherman_house/KNIFE.png" id="15_cmqux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h8wa"]
+size = Vector2(31, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1868k"]
+size = Vector2(30.5, 30)
+
+[node name="inventoryMenu" type="CanvasLayer" unique_id=1268594787]
+script = ExtResource("1_ibky2")
+
+[node name="astroParts" type="CanvasLayer" parent="." unique_id=344617145]
+
+[node name="rightArmLarge" type="TextureRect" parent="astroParts" unique_id=47152523]
+visible = false
+offset_left = 435.0
+offset_top = 269.0
+offset_right = 445.0
+offset_bottom = 318.0
+texture = ExtResource("7_gmw3m")
+metadata/_edit_lock_ = true
+
+[node name="rightArmSmall" type="TextureRect" parent="astroParts" unique_id=1626362816]
+visible = false
+offset_left = 379.0
+offset_top = 264.0
+offset_right = 387.0
+offset_bottom = 290.0
+texture = ExtResource("3_j55ug")
+metadata/_edit_lock_ = true
+
+[node name="leftArmLarge" type="TextureRect" parent="astroParts" unique_id=682745214]
+visible = false
+offset_left = 473.0
+offset_top = 269.0
+offset_right = 483.0
+offset_bottom = 317.0
+texture = ExtResource("8_s8wqb")
+metadata/_edit_lock_ = true
+
+[node name="leftArmSmall" type="TextureRect" parent="astroParts" unique_id=109838655]
+visible = false
+offset_left = 378.0
+offset_top = 302.0
+offset_right = 386.0
+offset_bottom = 327.0
+texture = ExtResource("5_fkgo8")
+metadata/_edit_lock_ = true
+
+[node name="torsoLarge" type="TextureRect" parent="astroParts" unique_id=440746129]
+visible = false
+offset_left = 443.0
+offset_top = 269.0
+offset_right = 475.0
+offset_bottom = 313.0
+texture = ExtResource("9_4fywr")
+metadata/_edit_lock_ = true
+
+[node name="torsoSmall" type="TextureRect" parent="astroParts" unique_id=197071106]
+visible = false
+offset_left = 372.0
+offset_top = 231.0
+offset_right = 393.0
+offset_bottom = 255.0
+texture = ExtResource("7_brl0o")
+metadata/_edit_lock_ = true
+
+[node name="rightLegLarge" type="TextureRect" parent="astroParts" unique_id=460972894]
+visible = false
+offset_left = 434.0
+offset_top = 299.0
+offset_right = 459.0
+offset_bottom = 347.0
+texture = ExtResource("10_yysc5")
+metadata/_edit_lock_ = true
+
+[node name="rightLegSmall" type="TextureRect" parent="astroParts" unique_id=1853138744]
+visible = false
+offset_left = 375.0
+offset_top = 336.0
+offset_right = 394.0
+offset_bottom = 360.0
+texture = ExtResource("9_0j6f8")
+metadata/_edit_lock_ = true
+
+[node name="leftLegLarge" type="TextureRect" parent="astroParts" unique_id=1751015103]
+visible = false
+offset_left = 461.0
+offset_top = 299.0
+offset_right = 487.0
+offset_bottom = 347.0
+texture = ExtResource("11_2lef6")
+metadata/_edit_lock_ = true
+
+[node name="leftLegSmall" type="TextureRect" parent="astroParts" unique_id=1121477704]
+visible = false
+offset_left = 372.0
+offset_top = 371.0
+offset_right = 391.0
+offset_bottom = 398.0
+texture = ExtResource("11_eu4gl")
+metadata/_edit_lock_ = true
+
+[node name="headLarge" type="TextureRect" parent="astroParts" unique_id=508169437]
+visible = false
+offset_left = 437.0
+offset_top = 235.0
+offset_right = 481.0
+offset_bottom = 275.0
+texture = ExtResource("12_ibky2")
+metadata/_edit_lock_ = true
+
+[node name="headSmall" type="TextureRect" parent="astroParts" unique_id=850269724]
+visible = false
+offset_left = 370.0
+offset_top = 196.0
+offset_right = 396.0
+offset_bottom = 220.0
+texture = ExtResource("13_ihx2g")
+metadata/_edit_lock_ = true
+
+[node name="inventory" type="CanvasLayer" parent="." unique_id=1091184584]
+
+[node name="keys" type="TextureRect" parent="inventory" unique_id=794925442]
+offset_left = 544.0
+offset_top = 238.0
+offset_right = 564.0
+offset_bottom = 257.0
+texture = ExtResource("14_i7uue")
+metadata/_edit_lock_ = true
+
+[node name="keysArea" type="Area2D" parent="inventory/keys" unique_id=1444870135]
+metadata/_edit_lock_ = true
+
+[node name="keysItemCollision" type="CollisionShape2D" parent="inventory/keys/keysArea" unique_id=1096433403]
+position = Vector2(10.5, 10)
+shape = SubResource("RectangleShape2D_0h8wa")
+metadata/_edit_lock_ = true
+
+[node name="knife" type="TextureRect" parent="inventory" unique_id=1858509774]
+offset_left = 590.0
+offset_top = 235.0
+offset_right = 597.0
+offset_bottom = 261.0
+texture = ExtResource("15_cmqux")
+metadata/_edit_lock_ = true
+
+[node name="knifeArea" type="Area2D" parent="inventory/knife" unique_id=1733447912]
+metadata/_edit_lock_ = true
+
+[node name="knifeCollision" type="CollisionShape2D" parent="inventory/knife/knifeArea" unique_id=1396243574]
+position = Vector2(2.75, 13)
+shape = SubResource("RectangleShape2D_1868k")
+metadata/_edit_lock_ = true
+
+[node name="background" type="TextureRect" parent="." unique_id=1259345883]
+offset_left = 327.0
+offset_top = 95.0
+offset_right = 801.0
+offset_bottom = 512.0
+texture = ExtResource("1_egg3t")
+metadata/_edit_lock_ = true
+
+[node name="astroPreviewBox" type="TextureRect" parent="." unique_id=1443793442]
+offset_left = 357.0
+offset_top = 185.0
+offset_right = 518.0
+offset_bottom = 404.0
+texture = ExtResource("2_lvvmf")
+metadata/_edit_lock_ = true
+
+[node name="astroPreview" type="TextureRect" parent="." unique_id=47995308]
+offset_left = 434.0
+offset_top = 235.0
+offset_right = 486.0
+offset_bottom = 347.0
+texture = ExtResource("3_14ymb")
+metadata/_edit_lock_ = true
+
+[node name="itemSlotsBackground" type="TextureRect" parent="." unique_id=1092713623]
+offset_left = 531.0
+offset_top = 215.0
+offset_right = 767.0
+offset_bottom = 393.0
+texture = ExtResource("4_5bw7c")
+metadata/_edit_lock_ = true
+
+[node name="itemSlots" type="TextureRect" parent="." unique_id=2023580128]
+offset_left = 365.0
+offset_top = 191.0
+offset_right = 762.0
+offset_bottom = 400.0
+texture = ExtResource("5_e34f0")
+metadata/_edit_lock_ = true
+
+[node name="descriptionBox" type="TextureRect" parent="." unique_id=12707756]
+offset_left = 346.0
+offset_top = 411.0
+offset_right = 781.0
+offset_bottom = 495.0
+texture = ExtResource("6_k43gh")
+metadata/_edit_lock_ = true
+
+[node name="itemDescription" type="RichTextLabel" parent="." unique_id=833133563]
+offset_left = 355.0
+offset_top = 421.0
+offset_right = 771.0
+offset_bottom = 484.0
+bbcode_enabled = true
+metadata/_edit_lock_ = true
+
+[connection signal="mouse_entered" from="inventory/keys/keysArea" to="." method="_on_keys_area_mouse_entered"]
+[connection signal="mouse_exited" from="inventory/keys/keysArea" to="." method="_on_keys_area_mouse_exited"]
+[connection signal="mouse_entered" from="inventory/knife/knifeArea" to="." method="_on_knife_area_mouse_entered"]
+[connection signal="mouse_exited" from="inventory/knife/knifeArea" to="." method="_on_knife_area_mouse_exited"]

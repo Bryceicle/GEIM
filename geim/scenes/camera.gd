@@ -1,16 +1,19 @@
 extends Camera2D
 
-@onready var main: Node2D = $"../"
-@onready var player: CharacterBody2D = $"../Fisherman"
+@onready var main: Node2D = $"/root/main"
+@onready var player: CharacterBody2D = $"/root/main/Fisherman"
 @onready var dialogue: Node2D = $dialogue
 @onready var pauseMenu: Node2D = $pauseMenu
+@onready var inventoryMenu: Node2D = $inventoryMenu
 
 const dialoguePreload = preload("res://scenes/UI/dialogue.tscn")
 const pauseMenuPreload = preload("res://scenes/UI/pauseMenu.tscn")
+const inventoryMenuPreload = preload("res://scenes/UI/inventoryMenu.tscn")
 
 var staticCam: bool
 var dialogueNode: CanvasLayer = dialoguePreload.instantiate()
 var pauseMenuNode: CanvasLayer = pauseMenuPreload.instantiate()
+var inventoryMenuNode: CanvasLayer = inventoryMenuPreload.instantiate()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,6 +23,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if !staticCam:
 		self.position = player.position
+
+func setCamera(x:int,y:int) -> void:
+	self.position = Vector2(x,y)
 
 func loadDialogue(text: String = "", char: int = -1) -> void:
 	
@@ -32,7 +38,18 @@ func removeDialogue() -> void:
 		dialogue.get_child(0).clearText()
 		dialogue.remove_child(dialogueNode)
 
+func toggleInventoryMenu() -> void:
+	
+	if inventoryMenu.get_child_count() == 0:
+		inventoryMenu.add_child(inventoryMenuNode)
+		inventoryMenu.get_child(0).request_ready()
+	else:
+		inventoryMenu.remove_child(inventoryMenuNode)
+
 func togglePauseMenu() -> void:
+	
+	if inventoryMenu.get_child_count() != 0:
+		inventoryMenu.remove_child(inventoryMenuNode)
 	
 	if pauseMenu.get_child_count() == 0:
 		pauseMenu.add_child(pauseMenuNode)

@@ -8,4 +8,6 @@ metadata/_edit_lock_ = true
 
 [node name="dialogue" type="Node2D" parent="." unique_id=842021825]
 
+[node name="inventoryMenu" type="Node2D" parent="." unique_id=259733603]
+
 [node name="pauseMenu" type="Node2D" parent="." unique_id=614242864]
