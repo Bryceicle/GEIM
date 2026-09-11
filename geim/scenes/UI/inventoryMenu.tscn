@@ -160,6 +160,7 @@ shape = SubResource("RectangleShape2D_0h8wa")
 metadata/_edit_lock_ = true
 
 [node name="knife" type="TextureRect" parent="inventory" unique_id=1858509774]
+visible = false
 offset_left = 590.0
 offset_top = 235.0
 offset_right = 597.0
@@ -230,6 +231,15 @@ offset_right = 771.0
 offset_bottom = 484.0
 bbcode_enabled = true
 metadata/_edit_lock_ = true
+
+[node name="itemLabel" type="RichTextLabel" parent="." unique_id=474430969]
+offset_left = 578.0
+offset_top = 183.0
+offset_right = 722.0
+offset_bottom = 209.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="inventory/keys/keysArea" to="." method="_on_keys_area_mouse_entered"]
 [connection signal="mouse_exited" from="inventory/keys/keysArea" to="." method="_on_keys_area_mouse_exited"]

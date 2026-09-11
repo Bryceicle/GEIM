@@ -12,6 +12,6 @@ func _on_body_entered(body: Node2D) -> void:
 		player.interactableNode = self
 
 func interact() -> void:
-	player.addItem(1)
+	player.addItem("KNIFE")
 	camera.loadDialogue("Never know when you'll need a knife ...", 0)
 	self.queue_free()

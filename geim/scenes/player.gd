@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-enum ItemsEnum {
+enum itemsEnum {
 	KEYS,
 	KNIFE
 }
@@ -26,14 +26,14 @@ const DEACCELERATION = 1500
 
 var map: Node2D
 var interactableNode: Node2D
-var inventoryArray: PackedByteArray
+var inventoryArray: Array[bool]
 
 @onready var character_sprite: AnimatedSprite2D = $Sprite
 @onready var camera: Node2D = $"/root/main/Camera"
 @onready var root: SceneTree = get_tree()
 
 func _init() -> void:
-	inventoryArray.resize(ItemsEnum.size())
+	inventoryArray.resize(itemsEnum.size())
 
 func _input(event: InputEvent) -> void:
 	
@@ -98,10 +98,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func addItem(item):
-	inventoryArray[item] = 1
+	inventoryArray[itemsEnum.get(item)] = true
 
 func removeItem(item):
-	inventoryArray[item] = 0
+	inventoryArray[itemsEnum.get(item)] = false
 	
 func getInventory() -> PackedByteArray:
 	return inventoryArray
